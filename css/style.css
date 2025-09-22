@@ -145,6 +145,9 @@ main {
 .form-columna input:focus {
   outline-color: #8ea0d4;
 }
+.form-columna input:invalid {
+  outline-color: #e09b9b;
+}
 /*estilos de formulario*/
 
 .main-footer .container {
@@ -176,7 +179,21 @@ main {
   body {
     flex-direction: row;
   }
+  main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   aside {
     width: 40%;
+  }
+  .form-fila {
+    flex-direction: row;
+  }
+
+  .form-columna {
+    flex: 1;
   }
 }

@@ -36,39 +36,80 @@
         <form id="form" class="main-form">
           <div class="container">
             <fieldset>
-                <legend>Let's do This</legend>
-                <section class="form-section">
-                    <article class="form-fila">
-                        <div class="form-columna">
-                            <label for="">FIRST NAME</label>
-                            <input type="text">
-                        </div>
-                        <div class="form-columna">
-                            <label for="">LAST NAME</label>
-                            <input type="text">
-                        </div>
-                    </article>
-                    <article class="form-fila">
-                        <div class="form-columna">
-                            <label for="">EMAIL</label>
-                            <input type="email">
-                        </div>
-                        <div class="form-columna">
-                            <label for="">PHONE NUMBER</label>
-                            <input type="tel">
-                        </div>
-                    </article>
-                    <article class="form-fila">
-                        <div class="form-columna">
-                            <label for="">PASSWORD</label>
-                            <input type="password">
-                        </div>
-                        <div class="form-columna">
-                            <label for="">CONFIRM PASSWORD</label>
-                            <input type="password">
-                        </div>
-                    </article>
-                </section>
+              <legend>Let's do This</legend>
+              <section class="form-section">
+                <article class="form-fila">
+                  <div class="form-columna">
+                    <label for="nombre">FIRST NAME</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      pattern="^[a-zA-Z]+$"
+                      title="Solo se permiten letras"
+                      required
+                    />
+                  </div>
+                  <div class="form-columna">
+                    <label for="apellido">LAST NAME</label>
+                    <input
+                      type="text"
+                      id="apellido"
+                      name="apellido"
+                      pattern="^[a-zA-Z]+$"
+                      title="Solo se permiten letras"
+                      required
+                    />
+                  </div>
+                </article>
+                <article class="form-fila">
+                  <div class="form-columna">
+                    <label for="email">EMAIL</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9\-]+(\.[a-z0-9\-]+)*(\.[a-z]{2,15})$"
+                      title="email incorrecto (test@gmail.com)"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="form-columna">
+                    <label for="phone">PHONE NUMBER</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      pattern="\d{10}"
+                      minlength="10"
+                      maxlength="10"
+                      required
+                      autocomplete="off"
+                    />
+                  </div>
+                </article>
+                <article class="form-fila">
+                  <div class="form-columna">
+                    <label for="password">PASSWORD</label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      required
+                    />
+                  </div>
+                  <div class="form-columna">
+                    <label for="password-confirm">CONFIRM PASSWORD</label>
+                    <input
+                      type="password"
+                      id="password-confirm"
+                      name="password-confirm"
+                      required
+                    />
+                  </div>
+                </article>
+              </section>
             </fieldset>
           </div>
         </form>
@@ -80,5 +121,6 @@
         </section>
       </div>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
